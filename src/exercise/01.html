@@ -19,3 +19,20 @@
 
 <!-- 🐨 Append the div to the root div using `append` -->
 <!--   💰 document.getElementById('root') -->
+
+<html>
+  <body>
+    <div id="root">
+      <script type="module">
+        const rootEl = document.getElementById('root');
+        const el = document.createElement('div');
+
+
+        el.className = 'container';
+        el.append('Hello World');
+
+        rootEl.append(el);
+      </script>
+    </div>
+  </body>
+</html>
