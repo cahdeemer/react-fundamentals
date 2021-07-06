@@ -12,7 +12,7 @@ const operations = {
 // 🦺 create a type called CalculatorProps
 type CalculatorProps = {
   left: number,
-  operator: string,
+  operator: keyof typeof operations,
   right: number,
 }
 
