@@ -8,6 +8,14 @@ function UsernameForm({
 }: {
   onSubmitUsername: (username: string) => void
 }) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formElements = form.elements as typeof form.elements & {
+      usernameInput: HTMLInputElement;
+    };
+    onSubmitUsername(formElements.usernameInput.value);
+  };
   // 🐨 add a submit event handler here (`handleSubmit`).
   // 💰 Make sure to accept the `event` as an argument
   // 🦺 the `event` type should be `React.FormEvent<HTMLFormElement>`
@@ -27,10 +35,10 @@ function UsernameForm({
   // 🐨 make sure to associate the label to the input.
   // to do so, set the value of 'htmlFor' prop of the label to the id of input
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
-        <label>Username:</label>
-        <input type="text" />
+        <label htmlFor="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" />
       </div>
       <button type="submit">Submit</button>
     </form>
