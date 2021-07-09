@@ -2,8 +2,8 @@ import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
 import * as utils from '../utils'
-import {App} from '../final/07'
-// import {App} from '../exercise/07'
+// import {App} from '../final/07'
+import {App} from '../exercise/07'
 
 jest.mock('../utils')
 
