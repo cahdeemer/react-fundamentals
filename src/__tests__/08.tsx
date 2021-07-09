@@ -2,8 +2,8 @@ import * as React from 'react'
 import {render, screen, within} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {alfredTip} from '@kentcdodds/react-workshop-app/test-utils'
-import {App} from '../final/08'
-// import {App} from '../exercise/08'
+// import {App} from '../final/08'
+import {App} from '../exercise/08'
 
 let error = jest.spyOn(console, 'error')
 beforeAll(() => {
